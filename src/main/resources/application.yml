@@ -1,9 +1,13 @@
-#server:
-#  port: 8090
-#spring:
+server:
+  port: 8090
+spring:
 #  activemq:
 #    broker-url: tcp://11.11.160.78:61616 #tcp表示协议,地址为服务器地址,端口为默认端口
 #    user: admin
 #    password: admin
 #  jms:
 #    pub-sub-domain: false #为true时是topic模式,为false是queue模式
+  profiles:
+    active:
+    - activeMQ
+    - sdpactivemq
